@@ -1,0 +1,487 @@
+:root {
+    --cinza: #808080;
+    --cinzam: #B9B9B9;
+    --rosa: #EF71A3;
+    --rosac: #FFBFDE;
+    --verde: #99EF71;
+    --brancos: #FAF7ED;
+    --sombra: -1px 2px 6px rgba(0,0,0,0.13);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+}
+
+/* RODAPÉ SUPERIOR */
+.rodape {
+    height: 100px;
+    width: 100%;
+    background-color: var(--rosa);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    gap: 35px;
+    box-shadow: var(--sombra);
+    padding: 0 20px;
+}
+
+/* FORMULÁRIO NEWSLETTER */
+.rodape form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+#informacoes {
+    width: 250px;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#informacoes::placeholder {
+    text-align: left;
+    color: var(--cinza);
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+}
+
+#informacoes:focus::placeholder {
+    opacity: 0;
+}
+
+#informacoes:focus,
+#informacoes:hover,
+#informacoes:active {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+#infbott {
+    background: transparent;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    border: none;
+    color: white;
+    text-align: center;
+    outline: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+#infbott:hover {
+    transform: scale(1.1);
+}
+
+/* SEÇÃO DE INFORMAÇÕES */
+#sombra {
+    box-shadow: var(--sombra);
+}
+
+.inforodape {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    color: var(--cinza);
+    font-size: 16px;
+    line-height: 1.8;
+    padding: 30px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#titulosrodape {
+    font-size: 18px;
+    color: var(--rosa);
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 25px;
+}
+
+#titulosrodape:first-child {
+    margin-top: 0;
+}
+
+/* FOOTER INFERIOR */
+footer {
+    padding: 40px 20px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.conteudo-rodape {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0px; /* MENOS ESPAÇO ENTRE AS SEÇÕES */
+    margin-bottom: 30px;
+}
+
+.secao-rodape {
+    flex: 1;
+    min-width: 250px;
+}
+
+.titulo-rodape {
+    color: var(--rosa);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.texto-rodape {
+    color: var(--cinza);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+/* LINKS CLICÁVEIS */
+.texto-link {
+    color: var(--cinza);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-bottom: 8px;
+    line-height: 1.4;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.texto-link:hover {
+    color: var(--rosa);
+}
+
+.links-rodape {
+    list-style: none;
+    margin: 15px 0 0 0;
+    padding: 0;
+}
+
+.links-rodape li {
+    margin-bottom: 8px;
+}
+
+.links-rodape a {
+    color: var(--cinza);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.links-rodape a:hover {
+    color: var(--rosa);
+}
+
+/* ÍCONES SOCIAIS COM FONT AWESOME */
+.icones-sociais {
+    display: flex;
+    gap: 12px;
+    margin: 15px 0;
+}
+
+.icone-social {
+    width: 40px;
+    height: 40px;
+    background: var(--rosa);
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.icone-social:hover {
+    background: var(--rosac);
+    transform: translateY(-2px);
+}
+
+.metodos-pagamento {
+    display: flex;
+    gap: 6px; /* MENOS ESPAÇO ENTRE OS ÍCONES */
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.icone-pagamento {
+    height: 25px;
+    border-radius: 4px;
+}
+
+.rodape-inferior {
+    border-top: 2px solid var(--rosac);
+    padding-top: 20px;
+    text-align: center;
+}
+
+/* RESPONSIVIDADE */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .rodape {
+        gap: 25px;
+        padding: 0 25px;
+    }
+    
+    #informacoes {
+        width: 220px;
+        font-size: 13px;
+    }
+    
+    .inforodape {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    
+    .conteudo-rodape {
+        gap: 25px; /* MENOS ESPAÇO NO TABLET */
+    }
+}
+
+/* Tablet Pequeno */
+@media (max-width: 768px) {
+    .rodape {
+        height: auto;
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 25px;
+    }
+    
+    .rodape h3 {
+        margin-bottom: 15px;
+        line-height: 1.3;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .rodape form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    #informacoes {
+        width: 100%;
+        max-width: 180px;
+        height: 50px;
+        font-size: 12px;
+    }
+    
+    #infbott {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+    
+    .inforodape {
+        margin-left: 30px;
+        margin-right: 30px;
+        padding: 40px 0;
+        font-size: 15px;
+    }
+    
+    .conteudo-rodape {
+        flex-direction: column;
+        gap: 25px; /* MENOS ESPAÇO NO MOBILE */
+    }
+    
+    .secao-rodape {
+        min-width: 100%;
+        text-align: center;
+    }
+    
+    .icones-sociais,
+    .metodos-pagamento {
+        justify-content: center;
+    }
+    
+    .links-rodape {
+        text-align: center;
+    }
+}
+
+/* Celular */
+@media (max-width: 480px) {
+    .rodape {
+        padding: 25px 15px;
+        gap: 20px;
+    }
+    
+    .rodape h3 {
+        font-size: 18px;
+    }
+    
+    .rodape form {
+        gap: 10px;
+    }
+    
+    #informacoes {
+        max-width: 140px;
+        height: 45px;
+        font-size: 11px;
+        padding: 0 12px;
+    }
+    
+    #infbott {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+    
+    .inforodape {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 30px 0;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    #titulosrodape {
+        font-size: 16px;
+    }
+    
+    #titulosrodape[style*="font-size: 24px"] {
+        font-size: 20px !important;
+    }
+    
+    footer {
+        padding: 30px 15px 15px;
+    }
+    
+    .conteudo-rodape {
+        gap: 20px; /* MENOS ESPAÇO NO CELULAR */
+    }
+    
+    .titulo-rodape {
+        font-size: 16px;
+    }
+    
+    .texto-rodape {
+        font-size: 13px;
+    }
+    
+    .texto-link {
+        font-size: 13px;
+    }
+    
+    .links-rodape a {
+        font-size: 13px;
+    }
+    
+    .icone-social {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+    
+    .metodos-pagamento {
+        gap: 4px; /* MENOS ESPAÇO ENTRE ÍCONES NO CELULAR */
+    }
+    
+    .icone-pagamento {
+        height: 20px;
+    }
+}
+
+/* Celular Pequeno */
+@media (max-width: 360px) {
+    .rodape {
+        padding: 20px 10px;
+        gap: 15px;
+    }
+    
+    .rodape h3 {
+        font-size: 16px;
+    }
+    
+    .rodape form {
+        gap: 8px;
+    }
+    
+    #informacoes {
+        max-width: 120px;
+        height: 42px;
+        font-size: 10px;
+        padding: 0 10px;
+    }
+    
+    #infbott {
+        width: 42px;
+        height: 42px;
+        font-size: 14px;
+    }
+    
+    .inforodape {
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 25px 0;
+        font-size: 13px;
+    }
+    
+    #titulosrodape {
+        font-size: 15px;
+    }
+    
+    #titulosrodape[style*="font-size: 24px"] {
+        font-size: 18px !important;
+    }
+    
+    footer {
+        padding: 25px 10px 10px;
+    }
+    
+    .conteudo-rodape {
+        gap: 15px; /* MENOS ESPAÇO NO CELULAR PEQUENO */
+    }
+}
+
+/* Desktop Grande */
+@media (min-width: 1200px) {
+    .rodape form {
+        gap: 15px;
+    }
+    
+    #informacoes {
+        width: 280px;
+    }
+    
+    .inforodape {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}

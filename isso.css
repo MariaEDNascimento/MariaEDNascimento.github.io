@@ -1,0 +1,529 @@
+:root{
+    --cinza:   #808080;
+    --cinzam:  #B9B9B9;
+    --rosa:    #EF71A3;
+    --rosac:   #FFBFDE;
+    --verde:   #99EF71;
+    --brancos: #FAF7ED;
+    --sombra: -1px 2px 6px rgba(0,0,0,0.13);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+}
+
+p{
+    margin: 0;
+}
+
+h3{
+    margin: 0;
+}
+.categorias-titulo{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: var(--cinza);
+    font-weight: 700;
+    margin-top: 0px;
+    margin-left: 260px;
+}
+
+/* PRODUTOS RESPONSIVA */
+.produtos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 260px;
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+.linha-produtos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.item-produto {
+    background-color: var(--brancos);
+    height: 320px;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.item-produto:hover {
+    transform: translateY(-5px);
+}
+
+.item-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: var(--cinza);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.item-link:hover {
+    color: var(--verde);
+}
+
+.foto-produto {
+    width: 190px;
+    height: 200px;
+    background-color: var(--rosac);
+    margin-bottom: 15px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+}
+
+.item-produto:hover .foto-produto {
+    transform: scale(1.05);
+}
+
+.item-produto h4 {
+    margin: 10px 0 5px 0;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.item-produto p {
+    color: var(--rosa);
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* ESTILOS ADICIONAIS PARA PRODUTOS */
+.produto-desc {
+    font-size: 12px;
+    color: var(--cinzam);
+    margin-top: 5px;
+    font-weight: 400;
+    display: block;
+    line-height: 1.3;
+    text-align: center;
+}
+
+/* FILTROS - POSICIONAMENTO CORRETO */
+.filtros-container {
+    width: 220px;
+    padding: 20px;
+    background-color: var(--brancos);
+    box-shadow: var(--sombra);
+    border-radius: 10px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    height: auto;
+    overflow: visible;
+    z-index: 100;
+}
+
+.filtro-grupo {
+    margin-bottom: 25px;
+    border-bottom: none;
+    padding-bottom: 15px;
+}
+
+.filtro-titulo {
+    font-weight: 600;
+    color: var(--cinza);
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.filtro-opcoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filtro-opcao {
+    padding: 6px 12px;
+    background-color: white;
+    border: 1px solid var(--cinzam);
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filtro-opcao:hover {
+    background-color: var(--rosac);
+}
+
+.filtro-opcao.ativo {
+    background-color: var(--rosa);
+    color: white;
+    border-color: var(--rosa);
+}
+
+.faixa-preco {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.preco-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.preco-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--cinzam);
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.preco-input:focus {
+    outline: none;
+    border-color: var(--rosa);
+}
+
+.btn-aplicar {
+    background-color: var(--rosa);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.btn-aplicar:hover {
+    background-color: var(--verde);
+}
+
+/* Container principal para organizar filtros e conteúdo */
+.conteudo-principal {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS - ROUPAS */
+
+/* Tablet */
+@media (max-width: 1030px) {
+    .categorias-titulo {
+        margin-left: 20px;
+        font-size: 22px;
+        height: 60px;
+    }
+    
+    .produtos-container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .filtros-container {
+        position: relative;
+        width: calc(100% - 40px);
+        left: 20px;
+        top: 0;
+    }
+    
+    .linha-produtos {
+        gap: 30px;
+    }
+    
+    .item-produto {
+        width: 200px;
+        height: 300px;
+    }
+    
+    .foto-produto {
+        width: 180px;
+        height: 180px;
+    }
+    
+    /* FAZ O 4º PRODUTO DESAPARECER NO TABLET */
+    .item-produto:nth-child(4) {
+        display: none;
+    }
+}
+
+@media (max-width: 723px) {
+    .categorias-titulo {
+        font-size: 22px;
+        height: 60px;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    
+    .produtos-container {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .linha-produtos {
+        gap: 20px;
+    }
+    
+    .item-produto {
+        width: 160px;
+        height: 280px;
+    }
+    
+    .foto-produto {
+        width: 140px;
+        height: 160px;
+    }
+    
+    .item-produto h4 {
+        font-size: 14px;
+    }
+    
+    .item-produto p {
+        font-size: 16px;
+    }
+    
+    .produto-desc {
+        font-size: 11px;
+    }
+    
+    /* MANTÉM APENAS 2 PRODUTOS NO TABLET PEQUENO */
+    .item-produto:nth-child(3),
+    .item-produto:nth-child(4) {
+        display: none;
+    }
+}
+
+/* CELULAR - 2 PRODUTOS VISÍVEIS + 2 ESCONDIDOS PARA ARRASTAR */
+@media (max-width: 480px) {
+    .produtos-container {
+        position: relative;
+        padding: 0 10px;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .linha-produtos {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 15px;
+        padding: 0 10px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+    }
+    
+    /* Remove a barra de scroll mas mantém a funcionalidade */
+    .linha-produtos::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .linha-produtos {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    
+    .item-produto {
+        flex: 0 0 auto;
+        width: calc(50% - 8px); /* 2 produtos por linha com gap */
+        height: 260px;
+        scroll-snap-align: start;
+        margin-right: 0;
+        
+        /* MOSTRA TODOS OS 4 PRODUTOS NO CELULAR (PARA ARRASTAR) */
+        display: flex !important;
+    }
+    
+    .foto-produto {
+        width: 100%;
+        max-width: 140px;
+        height: 150px;
+        margin: 0 auto 10px auto;
+    }
+    
+    .item-produto h4 {
+        font-size: 13px;
+    }
+    
+    .item-produto p {
+        font-size: 14px;
+    }
+    
+    .categorias-titulo {
+        font-size: 20px;
+        height: 50px;
+        margin-left: 0;
+        padding: 0 10px;
+    }
+}
+
+/* Tablet Pequeno - também com carrossel de 2 produtos */
+@media (max-width: 723px) and (min-width: 481px) {
+    .produtos-container {
+        position: relative;
+        padding: 0 15px;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .linha-produtos {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 20px;
+        padding: 0 15px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+    }
+    
+    .linha-produtos::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .linha-produtos {
+        -ms-overflow-scrolling: touch;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    
+    .item-produto {
+        flex: 0 0 auto;
+        width: calc(50% - 10px); /* 2 produtos por linha com gap */
+        height: 280px;
+        scroll-snap-align: start;
+        
+        /* MOSTRA TODOS OS 4 PRODUTOS NO TABLET PEQUENO (PARA ARRASTAR) */
+        display: flex !important;
+    }
+    
+    .foto-produto {
+        width: 100%;
+        max-width: 160px;
+        height: 170px;
+        margin: 0 auto 10px auto;
+    }
+    
+    .item-produto h4 {
+        font-size: 14px;
+    }
+    
+    .item-produto p {
+        font-size: 15px;
+    }
+
+    .categorias-titulo {
+        margin-left: 0;
+        padding: 0 15px;
+    }
+}
+
+/* Celular Pequeno */
+@media (max-width: 360px) {
+    .linha-produtos {
+        gap: 10px;
+    }
+    
+    .item-produto {
+        width: calc(50% - 5px);
+        height: 230px;
+    }
+    
+    .foto-produto {
+        max-width: 110px;
+        height: 120px;
+    }
+    
+    .item-produto h4 {
+        font-size: 12px;
+    }
+    
+    .item-produto p {
+        font-size: 14px;
+    }
+}
+
+/* Ajustes para hover em dispositivos touch */
+@media (hover: none) and (pointer: coarse) {
+    .item-produto:hover {
+        transform: none;
+    }
+    
+    .item-produto:active {
+        transform: scale(0.98);
+    }
+}
+
+.linha-produtos {
+    cursor: grab;
+}
+
+.linha-produtos:active {
+    cursor: grabbing;
+}
+
+/* Responsividade para filtros */
+@media (max-width: 768px) {
+    .filtros-container {
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: 0;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
+
+/* Garantir que o body não tenha margens extras */
+@media (max-width: 480px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    .conteudo-principal {
+        overflow-x: hidden;
+    }
+}

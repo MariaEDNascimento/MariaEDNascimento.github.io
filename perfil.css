@@ -1,0 +1,218 @@
+:root{
+    --cinza:   #808080;
+    --cinzam:  #B9B9B9;
+    --rosa:    #EF71A3;
+    --rosac:   #FFBFDE;
+    --verde:   #99EF71;
+    --brancos: #FAF7ED;
+    --sombra:-1px 2px 6px rgba(0,0,0,0.13);
+}
+body{
+    margin: 0px;
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+}
+p{
+    position: relative;
+    margin: 0;
+}
+h3{
+    position: relative;
+}
+.barra{
+   font-size: 16px;
+   position: relative;
+   line-height: 0.80;
+  
+}
+.titulo{
+    height: 66px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    justify-content: start;
+    align-items: center;
+    padding-left: 100px;
+}
+.logo{
+    height: 60px;
+    width: 150px;
+}
+.barra-pesquisa{
+    margin-left: 130px;
+    position: relative;
+    background-color: white;
+    height: 30px;
+    width: 560px;
+    border: 0px;
+    border-radius: 5px;
+    box-shadow: -1px 1px 6px rgba(0,0,0,0.3);
+    
+}
+.barra-pesquisa input{
+    background-color: transparent;
+    border: none;
+    flex: 1;
+    outline: none;
+    padding: 8px;
+    box-sizing: content-box;
+    width: 545px;
+}
+.perfil{
+    margin-left: 40px;
+    margin-right: 5px;
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+.btn-carrinho button{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(imagens/sacolas.png);
+    background-color: white;
+    border: 0;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+
+.carretel{
+    background-color: var(--rosa);
+    width: 100%;
+    height: 40px;
+    display: flex;
+    margin: 0%;
+    box-shadow: var(--sombra);
+    position: fixed;
+    top: 66px;
+    left: 0;
+    z-index: 1000;
+}
+#carretel{
+    position: relative;
+    top: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    left:260px;
+}
+a{
+    text-decoration: none;
+}
+ a:link,
+    a:visited{
+        color: white;
+    }
+    a:hover{
+        color:var(--verde);
+    }
+
+
+#painel-carrinho{
+    position: relative;
+    right: -15000px;
+    height: 1000px;
+    width: 350px;
+    transition: right 0.3s ease-in-out;
+    z-index: 10001;
+    background-color: #99EF71;
+    h3{
+        margin: 0;
+    }
+}
+#painel-carrinho.show{
+    right: -1400px;
+}
+
+
+
+
+
+
+
+
+.perfil-container{
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    color: var(--cinza);
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.rodape{
+    height: 100px;
+    width: 100%;
+    background-color: var(--rosa);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    gap: 35px;
+    box-shadow: var(--sombra);
+
+}
+
+#informacoes{
+    width: 300px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    margin-right: 20px; 
+}
+#infbott{
+    background: transparent;
+    cursor: pointer;
+    width: 40px;
+    height: 30px;
+    font-size: 36px;
+    line-height: 0;
+    border: none;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 8px;
+}
+#titulosrodape{
+    font-size: 18px;
+    color: var(--rosa);
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+.inforodape{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    font-weight: 600;
+    color: var(--cinza);
+    font-size: 16px;
+    height: 450px;
+    margin-left: 277px;
+    margin-right: 295px;
+    line-height: 1.8;
+}
+#sombra{
+     box-shadow: var(--sombra);
+}
